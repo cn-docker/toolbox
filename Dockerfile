@@ -1,5 +1,5 @@
 # Dependencies
-FROM hashicorp/terraform:1.13 AS terraform
+FROM hashicorp/terraform:1.14 AS terraform
 FROM fullstorydev/grpcurl:v1.9.3 AS grpcurl
 
 #################
