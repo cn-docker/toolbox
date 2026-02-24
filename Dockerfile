@@ -11,7 +11,7 @@ RUN go build -o toolbox
 
 #######
 # Image
-FROM debian:13-slim
+FROM ubuntu:24.04
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # Args
@@ -23,7 +23,7 @@ COPY --from=grpcurl /bin/grpcurl /bin/grpcurl
 
 # Install Tools
 RUN apt update && \
-    apt install -y curl git iproute2 iputils-ping netcat-openbsd nmap telnet traceroute wget && \
+    apt install -y curl dnsutils git iproute2 iputils-ping netcat-openbsd nmap telnet traceroute wget && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
