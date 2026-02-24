@@ -23,12 +23,15 @@ COPY --from=grpcurl /bin/grpcurl /bin/grpcurl
 
 # Install Tools
 RUN apt update && \
-    apt install -y curl dnsutils git iproute2 iputils-ping netcat-openbsd nmap telnet traceroute wget && \
+    apt install -y curl dnsutils git iproute2 iputils-ping netcat-openbsd nmap snapd telnet traceroute wget && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Environment
 ENV ARCH=${TARGETARCH}
+
+# Install AWS Cli
+RUN snap install aws-cli --classic
 
 # Install Kubectl
 ENV KUBECTL_VERSION=v1.34.0
