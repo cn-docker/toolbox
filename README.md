@@ -9,3 +9,13 @@
 [![](https://img.shields.io/github/issues-closed/cn-docker/toolbox)](https://github.com/cn-docker/toolbox)
 [![](https://img.shields.io/github/languages/code-size/cn-docker/toolbox)](https://github.com/cn-docker/toolbox)
 [![](https://img.shields.io/github/repo-size/cn-docker/toolbox)](https://github.com/cn-docker/toolbox)
+
+Docker image intended to start containers for debug tasks.
+
+## Usage
+
+### Kubernetes
+
+```bash
+kubectl run test --rm --it --image=cnservices/toolbox --restart=Never -- bash
+```
