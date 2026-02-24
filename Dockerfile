@@ -7,7 +7,7 @@ FROM fullstorydev/grpcurl:v1.9.3 AS grpcurl
 #################
 # Build Go Binary
 #################
-FROM golang:1.25-alpine3.21 AS build
+FROM golang:1.26-alpine AS build
 WORKDIR /app
 COPY src/ .
 RUN go build -o toolbox
@@ -22,6 +22,7 @@ LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 ARG TARGETARCH
 # renovate: datasource=github-tags depName=aws/aws-cli extractVersion=(?<version>.*)$
 ARG AWS_CLI_VERSION=2.33.28
+# renovate: datasource=github-releases packageName=kubernetes/kubernetes
 ARG KUBECTL_VERSION=v1.34.0
 
 # Envs
