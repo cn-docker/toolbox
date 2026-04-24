@@ -15,7 +15,7 @@ RUN go build -o toolbox
 #######
 # Image
 #######
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # Args
