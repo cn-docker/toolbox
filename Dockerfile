@@ -23,7 +23,7 @@ ARG TARGETARCH
 # renovate: datasource=github-tags depName=aws/aws-cli extractVersion=(?<version>.*)$
 ARG AWS_CLI_VERSION=2.36.6
 # renovate: datasource=github-releases depName=kubernetes/kubernetes
-ARG KUBECTL_VERSION=v1.36.2
+ARG KUBECTL_VERSION=v1.36.3
 
 # Envs
 ENV DEBIAN_FRONTEND=noninteractive
