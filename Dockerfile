@@ -21,7 +21,7 @@ LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 # Args
 ARG TARGETARCH
 # renovate: datasource=github-tags depName=aws/aws-cli extractVersion=(?<version>.*)$
-ARG AWS_CLI_VERSION=2.36.43
+ARG AWS_CLI_VERSION=2.36.44
 # renovate: datasource=github-releases depName=kubernetes/kubernetes
 ARG KUBECTL_VERSION=v1.37.0
 
